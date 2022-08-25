@@ -1,4 +1,9 @@
 <?php
+// stap-1 provide accses to php_mailer to send mail
+// got to https://accounts.google.com/DisplayUnlockCaptcha
+//stap-2 go to gmail setting -Forwarding and POP/IMAP inside select Enable IMAP
+//stap-3 on less secure option in google accounts if you are use 2 stap varification so set a app password in google accounts and use it in php_mailer
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
