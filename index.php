@@ -24,14 +24,14 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'ravaldarshan237200@gmail.com';                     //SMTP username
-    $mail->Password   = 'idbdncmcvzbnmwzv';                               //SMTP password
+    $mail->Password   = 'iqcagqfnjxdnbooj';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('ravaldarshan2372@gmail.com', 'Mailer');
-    $mail->addAddress('ravaldarshan23072000@gmail.com', 'Joe User');     //Add a recipient
-    $mail->addAddress('ravaldarshan2372@gmail.com');               //Name is optional
+    $mail->addAddress('sufiyanshk304@gmail.com', 'Joe User');     //Add a recipient
+    // $mail->addAddress('ravaldarshan2372@gmail.com');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     $mail->addCC('ravaldarshan2372@gmail.com');
     // $mail->addBCC('bcc@example.com');
@@ -43,7 +43,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Body = file_get_contents('test.php');
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
